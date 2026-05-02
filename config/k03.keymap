@@ -19,16 +19,17 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_tap_time 40>,
+                <&macro_wait_time 30>,
+                <&macro_tap>,
+                <&kp LG(SPACE)>,
                 <&macro_press>,
-                <&macro_wait_time 30>,
-                <&kp LEFT_ALT &kp LSHIFT>,
-                <&macro_wait_time 30>,
                 <&mo 2>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 2>,
-                <&macro_wait_time 30>,
-                <&kp LEFT_ALT &kp LSHFT>;
+                <&macro_tap>,
+                <&kp LG(SPACE)>;
 
             label = "ENG_LANG_SWITCH";
         };
@@ -37,31 +38,19 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_tap_time 40>,
+                <&macro_wait_time 30>,
+                <&macro_tap>,
+                <&kp LG(SPACE)>,
                 <&macro_press>,
-                <&kp LEFT_ALT &kp LSHIFT &mo 3>,
+                <&mo 3>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&kp LEFT_ALT &kp LSHFT &mo 1>;
+                <&mo 3>,
+                <&macro_tap>,
+                <&kp LG(SPACE)>;
 
             label = "ENG_LANG_SWITCH_2";
-        };
-
-        fhcn: fhcn {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&macro_wait_time 30>,
-                <&kp LEFT_ALT &kp LSHIFT>,
-                <&macro_wait_time 30>,
-                <&mo 3>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 3>,
-                <&macro_wait_time 30>,
-                <&kp LEFT_ALT &kp LSHFT>;
-
-            label = "FHCN";
         };
     };
 
@@ -89,11 +78,11 @@
 
         rus {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                     &kp N6  &kp N7     &kp N8    &kp N9    &kp N0   &kp BSPC
-&kp ESC    &kp Z   &kp SEMI  &kp A     &kp G      &kp COMMA                                  &kp Q   &kp K      &kp E     &kp S     &kp DOT  &kp RBKT
-&kp TAB    &kp F   &kp H     &kp C     &kp N      &kp U                                      &kp V   &kp Y      &kp T     &kp B     &kp J    &kp M
-&kp LSHFT  &kp P   &kp LBKT  &kp W     &kp L      &kp D               &kp LBKT     &kp RBKT  &kp R   &kp X      &kp I     &kp O     &kp SQT  &kp RSHFT
-                   &kp LGUI  &kp LALT  &kp LCTRL  &eng_lang_switch_1  &kp SPACE    &kp RET   &fhcn   &kp RCTRL  &kp RALT  &kp RGUI
+&kp GRAVE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                     &kp N6              &kp N7     &kp N8    &kp N9    &kp N0   &kp BSPC
+&kp ESC    &kp Z   &kp SEMI  &kp A     &kp G      &kp COMMA                                  &kp Q               &kp K      &kp E     &kp S     &kp DOT  &kp RBKT
+&kp TAB    &kp F   &kp H     &kp C     &kp N      &kp U                                      &kp V               &kp Y      &kp T     &kp B     &kp J    &kp M
+&kp LSHFT  &kp P   &kp LBKT  &kp W     &kp L      &kp D               &kp LBKT     &kp RBKT  &kp R               &kp X      &kp I     &kp O     &kp SQT  &kp RSHFT
+                   &kp LGUI  &kp LALT  &kp LCTRL  &eng_lang_switch_1  &kp SPACE    &kp RET   &eng_lang_switch_2  &kp RCTRL  &kp RALT  &kp RGUI
             >;
         };
 
